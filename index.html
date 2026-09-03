@@ -1192,8 +1192,8 @@
                 const currentValue = Math.floor(startValue + (target - startValue) * easeOut);
                 
                 if (typeof target === 'string') {
-                    if (target.includes(')) {
-                        element.textContent = ' + currentValue + (target.includes('B') ? 'B+' : 'M+');
+                    if (target.includes('$')) {
+                        element.textContent = '$' + currentValue + (target.includes('B') ? 'B+' : 'M+');
                     } else if (target.includes('%')) {
                         element.textContent = currentValue.toFixed(2) + '%';
                     } else {
